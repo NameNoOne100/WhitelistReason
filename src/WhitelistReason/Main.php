@@ -19,6 +19,7 @@
         if(!(file_exists("WhitelistReason/players.txt"))) {
 
           touch("WhitelistReason/players.txt");
+          file_put_contents("WhitelistReason/players.txt", "players, ");
 
         }
 
