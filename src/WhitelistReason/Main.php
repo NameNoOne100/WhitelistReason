@@ -30,7 +30,7 @@
 
         if(!(file_exists("WhitelistReason/whitelist.txt"))) {
 
-          touch("WhitelistReason/whitelist.yxt");
+          touch("WhitelistReason/whitelist.txt");
 
         }
 
