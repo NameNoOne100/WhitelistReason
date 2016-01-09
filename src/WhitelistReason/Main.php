@@ -28,6 +28,19 @@
 
         }
 
+        if(!(file_exists("WhitelistReason/whitelist.txt"))) {
+
+          touch("WhitelistReason/whitelist.yxt");
+
+        }
+
       }
 
     }
+
+    public function onJoin(PlayerJoinEvent $event) {
+
+      $player = $event->getPlayer();
+      $whitelist = file_get_contents("WhitelistReason/whitelist.txt");
+      $players = file_get_contents("WhitelistReason/players.txt");
+      $reason = file_get_contents("WhitelistReason/reason.txt");
