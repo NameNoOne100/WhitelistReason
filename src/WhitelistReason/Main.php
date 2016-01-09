@@ -44,3 +44,5 @@
       $whitelist = file_get_contents("WhitelistReason/whitelist.txt");
       $players = file_get_contents("WhitelistReason/players.txt");
       $reason = file_get_contents("WhitelistReason/reason.txt");
+
+      if($whitelist == "true") {
