@@ -1,0 +1,5 @@
+name: WhitelistReason
+version: 1.0.0
+author: applqpak/NameNoOne100
+api: [1.0.0]
+main: WhitelistReason\Main
