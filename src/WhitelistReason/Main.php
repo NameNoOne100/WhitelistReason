@@ -48,4 +48,10 @@
 
       if($whitelist == "true") {
 
-        $player_isWhitelisted = strpos($players, $player_name
+        $player_isWhitelisted = strpos($players, $player_name);
+
+        if($player_isWhitelisted == true) {
+
+          $player->kick($reason);
+
+        }
