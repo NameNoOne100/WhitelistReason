@@ -55,3 +55,11 @@
           $player->kick($reason);
 
         }
+
+      }
+
+    }
+
+  }
+
+?>
