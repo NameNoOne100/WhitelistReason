@@ -12,8 +12,14 @@ commands:
     usage: "/wr <true | false>"
     description: Enable/Disable WhitelistReason.
     permission: whitelist.command.wr
+  add:
+    usage: "/add <player>"
+    description: Add A Player To WhitelistReason.
+    permission: whitelist.command.add
 permissions:
   whitelist.command.reason:
     default: op
   whitelist.command.wr:
+    default: op
+  whitelist.command.add:
     default: op
