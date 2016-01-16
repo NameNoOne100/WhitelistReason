@@ -107,6 +107,23 @@
 
       }
 
+      if($cmd->getName() == "add") {
+
+        if(!(isset($args[0]))) {
+
+          $sender->sendMessage(TF::RED . "Error: not enough args.");
+
+        } else {
+
+          $file = file_get_contents("WhitelistReason/players.txt");
+          $player = args[0];
+          file_put_contents($file, $player . ", ", FILE_APPEND);
+          $sender->sendMessage(TF::GREEN . "Successfully added new player!");
+
+        }
+
+      }
+
     }
 
   }
