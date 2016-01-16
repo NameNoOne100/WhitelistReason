@@ -76,8 +76,9 @@
         } else {
 
           $reason = implode(" ", $args);
-          str_replace(file_get_contents("WhitelistReason/reason.txt"), $reason, file_get_contents("WhitelistReason/reason.txt"));
+          $replace = str_replace(file_get_contents("WhitelistReason/reason.txt"), $reason, file_get_contents("WhitelistReason/reason.txt"));
           $sender->sendMessage(TF::GREEN . "Successfully updated reason!");
+          file_put_contents("WhitelistReason/reason.txt", $replace);
 
         }
 
@@ -93,13 +94,15 @@
 
           if(strtolower($args[0]) == "true") {
 
-            str_replace(file_get_contents("WhitelistReason/whitelist.txt"), "true", file_get_contents("WhitelistReason/whitelist.txt"));
+           $replace = str_replace(file_get_contents("WhitelistReason/whitelist.txt"), "true", file_get_contents("WhitelistReason/whitelist.txt"));
             $sender->sendMessage(TF::GREEN . "Successfully updated whitelist, please restart server.");
+            file_put_contents("WhitelistReason/whitelist.txt", $replace);
 
           } else if(strtolower($args[0]) == "false") {
 
-            str_replace(file_get_contents("WhitelistReason/whitelist.txt"), "false", file_get_contents("WhitelistReason/whitelist.txt"));
+            $replace = str_replace(file_get_contents("WhitelistReason/whitelist.txt"), "false", file_get_contents("WhitelistReason/whitelist.txt"));
             $sender->sendMessage(TF::GREEN . "Successfully updated whitelist, please restart server.");
+            file_put_contents("WhitelistReason/whitelist.txt", $replace);
 
           }
 
