@@ -3,3 +3,17 @@ version: 1.0.0
 author: applqpak/NameNoOne100
 api: [1.0.0]
 main: WhitelistReason\Main
+commands:
+  reason:
+    usage: "/reason <reason>"
+    description: Change The WhiteList Reason.
+    permission: whitelist.command.reason
+  wr:
+    usage: "/wr <true | false>"
+    description: Enable/Disable WhitelistReason.
+    permission: whitelist.command.wr
+permissions:
+  whitelist.command.reason:
+    default: op
+  whitelist.command.wr:
+    default: op
