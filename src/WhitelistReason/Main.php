@@ -5,6 +5,7 @@
   use pocketmine\plugin\PluginBase;
   use pocketmine\event\Listener;
   use pocketmine\event\player\PlayerJoinEvent;
+  use pocketmine\utils\TextFormat as TF;
   use pocketmine\command\Command;
   use pocketmine\command\CommandSender;
   use pocketmine\command\ComamndExecutor;
@@ -65,6 +66,17 @@
     }
 
     public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
+
+      if($cmd->getName() === "reason") {
+
+        if(!(isset($args[0]))) {
+
+          $sender->sendMessage(TF::RED . "Error: not enough args.");
+
+        } else {
+
+          $reason = implode(" ", $args);
+          str_replace(file_get_contents("WhitelistReason/reason.txt"), $reason, file_get_contents("WhitelistReason/reason.txt"));
 
   }
 
